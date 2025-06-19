@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | [Ton Prénom]</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=JetBrains+Mono&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body>
+    <!-- ⚡ Navigation -->
+    <nav id="navbar">
+        <div class="container">
+            <a href="#home" class="logo">FODE KEITA</a>
+            <div class="nav-links">
+                <a href="#about"><i class="fas fa-user"></i> À Propos</a>
+                <a href="#projects"><i class="fas fa-code"></i> Projets</a>
+                <a href="#skills"><i class="fas fa-chart-bar"></i> Compétences</a>
+                <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+                <button id="dark-mode-toggle"><i class="fas fa-moon"></i></button>
+            </div>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 🚀 Hero Section -->
+    <section id="home" class="section">
+        <div class="hero-content">
+            <h1>Salut, je suis <span class="typing"></span></h1>
+            <p>Étudiant en L3 Informatique | Passionné par le développement web et les interfaces interactives.</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+                <a href="assets/cv.pdf" download class="btn btn-secondary">Télécharger mon CV</a>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- 📌 À Propos -->
+    <section id="about" class="section">
+        <h2 class="section-title">À Propos de <span>Moi</span></h2>
+        <div class="about-grid">
+            <div class="about-img">
+                <img src="assets/img/im2.jpg" alt="Ma photo" loading="lazy">
+            </div>
+            <div class="about-text">
+                <p>
+                    Je suis un étudiant passionné par les mathématiques, qui développe ses compétences en programmation
+                    à travers des projets concrets. J’ai appris à créer des sites web dynamiques, des interfaces
+                    utilisateur modernes et à manipuler des bases de données avec PHP, MySQL et PDO. Curieux et motivé,
+                    j’explore aussi l’intelligence artificielle avec Python et des bibliothèques comme PyTorch et
+                    Transformers. Mon approche est pratique : j’apprends en construisant des projets utiles, notamment
+                    des plateformes web et des interfaces intelligentes. Je cherche à combiner rigueur mathématique et
+                    créativité technique dans chaque réalisation.
+                </p>
+                <div class="timeline">
+                    <!-- Timeline items here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 💻 Projets -->
+    <section id="projects" class="section">
+        <h2 class="section-title">Mes <span>Projets</span></h2>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">Tous</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="js">JavaScript</button>
+        </div>
+        <div class="projects-grid">
+            <!-- Projet 1 -->
+            <div class="project-card" data-category="web">
+                <div class="project-img">
+                    <img src="assets/img/capture2.jpg" alt="Projet 1" loading="lazy">
+                </div>
+                <div class="project-info">
+                    <h3>Modélisation mathématique d'une épidemie à l'aide du modèle SIR</h3>
+                    <p>HTML/CSS • JavaScript • Equations différentielle</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Fode-coder/simulateur-SIR"><i class="fab fa-github"></i></a>
+                        <a href="https://fode-coder.github.io/simulateur-SIR/"><i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Projet 2 (En cours) -->
+            <div class="project-card" data-category="js">
+                <div class="badge">En cours</div>
+                <!-- ... -->
+            </div>
+        </div>
+    </section>
+    <section id="experience" class="section">
+        <h2 class="section-title">Mon <span>Expérience</span></h2>
+
+        <div class="experience-empty">
+            <div class="empty-state">
+                <i class="fas fa-hourglass-start"></i>
+                <h3>En construction</h3>
+                <p>Je suis actuellement en train de développer mes premières expériences professionnelles.<br>
+                    Cette section sera bientôt mise à jour !</p>
+            </div>
+
+            <!-- Exemple à décommenter plus tard -->
+            <div class="experience-example hidden">
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <h3>Stage Développement Web</h3>
+                        <span class="exp-date">Juillet 2024</span>
+                    </div>
+                    <p class="exp-company">Entreprise XYZ • Paris</p>
+                    <ul class="exp-tasks">
+                        <li>Développement d'interfaces avec React.js</li>
+                        <li>Participation aux réunions Agile</li>
+                        <li>Optimisation des performances</li>
+                    </ul>
+                    <div class="exp-skills">
+                        <span>React</span>
+                        <span>JavaScript</span>
+                        <span>Git</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📩 Contact -->
+    <section id="contact" class="section">
+        <h2 class="section-title">Contactez-<span>Moi</span></h2>
+        <div class="contact-grid">
+            <form id="contact-form">
+                <input type="text" placeholder="Nom" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Votre message..." required></textarea>
+                <button type="submit" class="btn btn-primary">Envoyer</button>
+            </form>
+            <div class="contact-info">
+                <a href="keita.fode@ugb.edu.sn.com"><i class="fas fa-envelope"></i> email@example.com</a>
+                <a href="https://github.com/Fode-coder"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://www.linkedin.com/in/fod%C3%A9-keita-9129aa202/"><i class="fab fa-linkedin"></i>
+                    LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📜 Footer -->
+    <footer>
+        <p>&copy; 2025 FODE KEITA. Tous droits réservés.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+
+</html>

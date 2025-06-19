@@ -1,0 +1,46 @@
+/* ✨ Animation du Header au Scroll */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#navbar {
+    animation: fadeInDown 0.5s both;
+}
+
+/* 🌈 Hover sur les Boutons */
+.btn {
+    display: inline-block;
+    padding: 1.2rem 2.5rem;
+    background: var(--primary);
+    color: white;
+    border-radius: 50px;
+    font-size: 1.6rem;
+    font-weight: 600;
+    transition: var(--transition);
+    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(67, 97, 238, 0.4);
+}
+
+/* 🌀 Effet de Vague pour le Footer */
+footer::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%231a1a2e" opacity=".25"/></svg>');
+    background-size: cover;
+}
