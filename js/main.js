@@ -123,3 +123,65 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+/**
+ * Ouvre le client mail par défaut avec un message pré-rempli
+ * @param {string} email - Email du destinataire (protégé anti-spam)
+ * @param {string} subject - Sujet par défaut
+ * @param {string} body - Corps du message par défaut
+ */
+function initEmailLink(emailElementId = 'email-link') {
+  const emailLink = document.getElementById(emailElementId);
+  
+  if (!emailLink) return;
+
+  emailLink.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    // Protection anti-spam (email découpé)
+    const emailParts = [
+      'keita.fode',
+      '@',
+      'ugb.edu.sn' // Corrigé (.sn au lieu de .sn.com)
+    ];
+    
+    // Paramètres du message
+    const emailParams = {
+      to: emailParts.join(''),
+      subject: 'Contact depuis votre portfolio',
+      body: 'Bonjour Fodé,\n\nJe vous contacte à propos de...'
+    };
+
+    // Construction du lien mailto sécurisé
+    const mailtoUrl = `mailto:${emailParams.to}?subject=${
+      encodeURIComponent(emailParams.subject)
+    }&body=${
+      encodeURIComponent(emailParams.body)
+    }`;
+
+    // Ouverture compatible avec tous les navigateurs
+    openMailClient(mailtoUrl);
+  });
+}
+
+/**
+ * Méthode d'ouverture cross-browser
+ */
+function openMailClient(url) {
+  // Essai d'ouverture dans un nouvel onglet
+  const mailWindow = window.open(url, '_blank');
+  
+  // Fallback si bloqué par le navigateur
+  if (!mailWindow || mailWindow.closed) {
+    const hiddenLink = document.createElement('a');
+    hiddenLink.href = url;
+    hiddenLink.style.display = 'none';
+    document.body.appendChild(hiddenLink);
+    hiddenLink.click();
+    document.body.removeChild(hiddenLink);
+  }
+}
+
+// Initialisation au chargement
+document.addEventListener('DOMContentLoaded', () => {
+  initEmailLink(); // ID par défaut 'email-link'
+});
