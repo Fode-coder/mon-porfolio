@@ -163,7 +163,9 @@
             </form>
         -->
             <div class="contact-info">
-                <a href="keita.fode@ugb.edu.sn"><i class="fas fa-envelope"></i> Email</a>
+                <a href="#" onclick="ouvrirGmail('keita.fode@ugb.edu.sn')">
+                  <i class="fas fa-envelope"></i> Envoyer un email
+                </a>
                 <a href="https://github.com/Fode-coder"><i class="fab fa-github"></i> GitHub</a>
                 <a href="https://www.linkedin.com/in/fod%C3%A9-keita-9129aa202/"><i class="fab fa-linkedin"></i>
                     LinkedIn</a>
@@ -179,6 +181,13 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="js/main.js"></script>
     <script src="js/animations.js"></script>
+    <script>
+function ouvrirGmail(adresseEmail) {
+    const url = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(adresseEmail)}`;
+    window.open(url, '_blank');
+}
+</script>
 </body>
 
 </html>
+
